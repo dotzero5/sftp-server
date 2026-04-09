@@ -1,7 +1,7 @@
 // Если будете подключаться с другого компьютера, не забудьте открыть порт 2222 в брандмауэре Windows (на компьютере с сервером):
 // powershell
 // New-NetFirewallRule -DisplayName "SFTP Server" -Direction Inbound -Protocol TCP -LocalPort 2222 -Action Allow
-// : Инициализируйте Go модуль
+// Инициализируйте Go модуль
 // go mod init sftp
 // Установите зависимости
 // go get github.com/pkg/sftp
@@ -10,7 +10,8 @@
 // go mod tidy
 // Запустите сервер
 // go run main.go
-
+// или компиляция
+// go build
 package main
 
 import (
