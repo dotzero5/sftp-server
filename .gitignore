@@ -1,0 +1,50 @@
+# Binaries for programs and plugins
+/bin/
+/build/
+/dist/
+/out/
+/*.exe
+/*.exe~
+/*.dll
+/*.so
+/*.dylib
+
+# Test binary and coverage
+*.test
+coverage.out
+
+# Package objects
+pkg/
+*.a
+
+# Vendor directory
+/vendor/
+Godeps/
+
+# Go tools
+*.log
+go.sum 
+go.mod
+
+# Ignore local env and secrets
+.env
+.env.*.local
+*.pem
+*.key
+id_rsa
+id_dsa
+users.json
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*~
+.project
+.settings/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+desktop.ini
