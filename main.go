@@ -49,6 +49,12 @@ func main() {
 		log.Fatal(err)
 	}
 	exeDir := filepath.Dir(exePath)
+	// If the executable is in the system temp dir (go run), use the current working dir
+	if temp := os.TempDir(); temp != "" && filepath.HasPrefix(exeDir, temp) {
+		if wd, err := os.Getwd(); err == nil {
+			exeDir = wd
+		}
+	}
 	usersPath := filepath.Join(exeDir, "users.json")
 
 	// Загружаем или создаём файл пользователей (JSON + bcrypt)
